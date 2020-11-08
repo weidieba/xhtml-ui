@@ -1,0 +1,54 @@
+
+    /* 主色 */
+    $--color-primary: #0067ed;
+    $--color-black: #1e2330;
+    $--color-success: #00cc26;
+    $--color-deep-gray: #66686c;
+    $--color-light-gray: #a8abb3;
+    $--color-lighter-gray: #b4b7bf;
+    $--color-white: #FFF;
+  
+    /* 辅助色 */
+    $--color-warning: #ff4222;
+    $--color-deep-warning: #E63C1E;
+    $--color-hover-warning: #FF684F;
+    $--color-deep-primary: #0056c7;
+    $--color-hover-primary: #197dff;
+    $--color-deep-success: #00b321;
+    $--color-hover-success: #18db3c;
+    $--color-notice: #e5a325;
+  
+    /* 背景及线条颜色 */
+    $--line-deep-gray: #dadee7;
+    $--line-light-gray: #ebedf2;
+    $--bg-deep-gray: #ebedf2;
+    $--bg-light-gray: #f8fafb;
+    $--bg-deep-gray: #e4e8ea;
+    $--bg-light-gray: #f4f6f9;
+    $--bg-lighter-primary: #f5fafe;
+    $--bg-deep-primary: #7f8698;
+    $--bg-middle-primary: #d3e9ff;
+    $--bg-light-primary: #e0ebfd;
+    $--bg-light-warning: #ffe3de;
+    $--bg-light-notice: #fff1d6;
+    $--bg-light-success: #d9f7df;
+    $--bg-light-cyan: #f5f8fa;
+    $--bg-deep-cyan: #eef3f6;
+  
+    /* 透明度 */
+    $--disabled-opacity: 0.38;
+  
+    /* 边框线 */
+    $--border-base: 1px solid $--line-deep-gray;
+    $--border-selected: 1px solid $--color-light-gray;
+    $--border-radius-base: 2px;
+  
+    /* 渐变 */
+    $--all-transition: all .3s cubic-bezier(.645,.045,.355,1);
+  
+    /* box-shadow */
+    $--shadow-large-tip: 0 1px 15px 0 rgba(30, 36, 49, 0.15);
+    
+    // 相同变量名
+    $class-prefix: "x"; 
+    $is: "is";
