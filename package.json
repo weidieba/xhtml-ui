@@ -1,17 +1,16 @@
 {
-  "name": "xhtml",
-  "version": "0.1.0",
+  "name": "xhtml-ui",
+  "version": "1.0.0",
   "private": false,
   "description": "这是一个开源供学习得xhtml",
-  "author": "罗威",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev": "npm run serve",
-    "lib":"vue-cli-service build --target lib  --name xhtml-ui   ./src/components/index.js" 
+    "lib":"vue-cli-service build --target lib --name xhtml-ui --dest lib src/components/index.js"
   },
-  "main":"./dist/xhtml.umd.min.js",
+  "main":"lib/xhtml-ui.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
