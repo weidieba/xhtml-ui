@@ -30,13 +30,9 @@
 </template>
 
 <script>
-import Xbutton from '@/components/button/button';
-import Xicon from '@/components/icon/icon';
 export default {
     name: 'Home',
     components: {
-        Xbutton,
-        Xicon
     },
     methods: {
         test() {
