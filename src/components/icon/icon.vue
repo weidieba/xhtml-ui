@@ -1,7 +1,5 @@
 <template>
-    <div :class="['x-icon',clazz]">
-        <i :class="icon" />
-    </div>
+    <i :class="[icon,'x-icon',clazz]" />
 </template>
 <script>
 export default {
