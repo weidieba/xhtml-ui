@@ -20,6 +20,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~@/assets/common/color.scss";
+@import '~@/assets/fonts/font.css';
 .#{$class-prefix}{
     &-icon {
         display: inline;

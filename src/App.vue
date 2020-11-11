@@ -5,5 +5,4 @@
 </template>
 
 <style lang="scss">
-@import '~@/assets/fonts/font.css';
 </style>
