@@ -1,13 +1,9 @@
 <script>
 import pick from 'lodash/pick';
 export default {
-    name: 'Xbutton',
+    name: 'x-button',
     functional: true,
     props: {
-        kind: {
-            type: String,
-            default: ''
-        },
         status: {
             type: String,
             // 'default', 'primary', 'warning', 'success'
@@ -44,11 +40,10 @@ export default {
         }
     },
     render(h, context) {
-        console.log(context);
         const {props, children} = context;
         const clazz = [
             'x-button',
-            `x-button--${props.kind || props.status}`,
+            `x-button--${props.status}`,
             `x-button--${props.size}`,
             {
                 'is-disabled': props.disabled,

@@ -1,31 +1,31 @@
 <template>
     <div class="home">
-        <Xbutton
+        <x-button
             status="primary"
             disabled
             loading
             plain
         >
             奥里给1
-        </Xbutton>
-        <Xbutton
+        </x-button>
+        <x-button
             status="success"
             loading
         >
             奥里给2
-        </Xbutton>
-        <Xbutton
+        </x-button>
+        <x-button
             status="warning"
             @click="test"
         >
             奥里给31
-        </Xbutton>
-        <Xbutton
+        </x-button>
+        <x-button
             status="default"
             size="large"
         >
-            <Xicon icon="x-icon-ice-drink" />
-        </Xbutton>
+            <x-icon icon="x-icon-ice-drink" />
+        </x-button>
     </div>
 </template>
 
