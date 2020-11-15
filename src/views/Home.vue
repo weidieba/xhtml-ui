@@ -1,31 +1,35 @@
 <template>
     <div class="home">
-        <x-button
-            status="primary"
-            disabled
-            loading
-            plain
+        <x-statusbar
+            kind="success"
+            content="123131312123123"
+            show-close-icon
+            @close="test"
         >
-            奥里给1
-        </x-button>
-        <x-button
-            status="success"
-            loading
+        </x-statusbar>
+        <x-statusbar
+            size="medium"
+            kind="info"
+            content="123131312123123"
+            center
+            show-close-icon
         >
-            奥里给2
-        </x-button>
-        <x-button
-            status="warning"
-            @click="test"
+        </x-statusbar>
+        <x-statusbar
+            kind="warning-outline"
+            content="123131312123123"
+        ></x-statusbar>
+        <x-statusbar
+            size="medium"
+            kind="error"
+            content="123131312123123"
         >
-            奥里给31
-        </x-button>
-        <x-button
-            status="default"
-            size="large"
-        >
-            <x-icon icon="x-icon-ice-drink" />
-        </x-button>
+        </x-statusbar>
+        <x-statusbar
+            kind="alarm"
+            content="123131312123123"
+            show-close-icon
+        ></x-statusbar>
     </div>
 </template>
 

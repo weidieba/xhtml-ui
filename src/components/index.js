@@ -1,10 +1,12 @@
 // 所有组件的入口，我们可以在这里进行扩展一些组件，并进行整合
 import Button from './button/index.js';
 import Icon from './icon/index.js';
+import statusBar from './statusBar/index.js';
 // 存储组件列表
 const components = [
     Button,
-    Icon
+    Icon,
+    statusBar
 ];
 // 这里提供一个方法，待会用的时候就use这个方法,因为use是vue的方法，所以这个方法要把Vue传进来
 const install = (Vue) => {
@@ -22,5 +24,6 @@ if (typeof window.Vue !== 'undefined') { // 这个判断条件这样写是因为
 export default {
     install,
     Button,
-    Icon
+    Icon,
+    statusBar
 };
