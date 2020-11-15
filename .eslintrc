@@ -156,9 +156,15 @@
         }],
         "yield-star-spacing": [2, "both"],
         "vue/html-indent": [2, 4],
-        "vue/component-name-in-template-casing": ["error", "kebab-case", {
-            "registeredComponentsOnly": false,
-            "ignores": []
+        "vue/html-self-closing": ["error",{
+                "html": {
+                "void": "never",
+                "normal": "any",
+                "component": "any"
+                },
+                "svg": "always",
+                "math": "always"
             }]
-    }
+        
+        }
 }
