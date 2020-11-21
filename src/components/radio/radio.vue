@@ -5,6 +5,7 @@
             'is-checked': computedValue === label,
             'is-disabled': disabled
         }"
+        class="x-radio"
     >
         <span class="x-radio-input">
             <span class="x-radio-round"></span>
@@ -33,9 +34,9 @@ export default {
     props: {
         // 默认绑定到v-model上的value值
         value: {
-            type: Object,
+            type: [Object, String, Number, Array, Boolean],
             default() {
-                return {};
+                return [];
             }
         },
         label: {

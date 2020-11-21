@@ -1,10 +1,10 @@
 <template>
     <div class="home">
-        <x-radio-group
-            v-model="radio"
-            kind="button"
-            vertical
-        >
+            <x-radio-group
+                v-model="radio"
+                kind="button"
+                vertical
+            >
             <x-radio
                 label="One"
             >

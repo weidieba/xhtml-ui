@@ -72,7 +72,6 @@ export default {
             flex-direction:column;
             .x-radio-group-item {
                 display: block;
-                margin: 10px 0;
 
                 &:first-child {
                     margin-top: 0;
