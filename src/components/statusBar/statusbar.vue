@@ -37,7 +37,7 @@
 </template>
 <script>
 export default {
-    name: 'x-statusbar',
+    name: 'XStatusbar',
     props: {
         content: {
             type: String,

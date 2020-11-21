@@ -1,0 +1,54 @@
+/**
+ * 重置样式
+ *
+ */
+ @mixin reset ($display: inline-block) {
+    display: $display;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    outline: 0;
+
+    &::-webkit-scrollbar,
+    div::-webkit-scrollbar,
+    textarea::-webkit-scrollbar,
+    ul::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+    }
+
+
+    &::-webkit-scrollbar-thumb,
+    textarea::-webkit-scrollbar-thumb,
+    div::-webkit-scrollbar-thumb,
+    ul::-webkit-scrollbar-thumb {
+        background-color: #c8cbcc;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece,
+    textarea::-webkit-scrollbar-track-piece,
+    div::-webkit-scrollbar-track-piece,
+    div::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+}
+
+@mixin reset-scrollbar {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #c8cbcc;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+}

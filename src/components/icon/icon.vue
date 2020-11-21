@@ -1,7 +1,7 @@
 <script>
 import pick from 'lodash/pick';
 export default {
-    name: 'x-icon',
+    name: 'XIcon',
     functional: true,
     props: {
         icon: {

@@ -1,7 +1,7 @@
 <script>
 import pick from 'lodash/pick';
 export default {
-    name: 'x-button',
+    name: 'XButton',
     functional: true,
     props: {
         status: {
