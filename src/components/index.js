@@ -2,6 +2,7 @@
 import Button from './button/index.js';
 import Icon from './icon/index.js';
 import statusBar from './statusBar/index.js';
+import Link from './link/index';
 import Radio from './radio/index.js';
 import RadioGroup from './radio-group/index';
 // 存储组件列表
@@ -9,6 +10,7 @@ const components = [
     Button,
     Icon,
     statusBar,
+    Link,
     Radio,
     RadioGroup
 ];
@@ -30,6 +32,7 @@ export default {
     Button,
     Icon,
     statusBar,
+    Link,
     Radio,
     RadioGroup
 };

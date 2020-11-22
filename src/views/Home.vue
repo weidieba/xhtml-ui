@@ -1,39 +1,37 @@
 <template>
     <div class="home">
-            <x-radio-group
-                v-model="radio"
-                kind="button"
-                vertical
-            >
-            <x-radio
-                label="One"
-            >
-                草泥马
-            </x-radio>
-            <x-radio
-                label="Two"
-            >
-                草泥马2
-            </x-radio>
-            <x-radio
-                label="three"
-                disabled
-            >
-                草泥马3
-            </x-radio>
-            <x-radio
-                label="four"
-            >
-                草泥马4
-            </x-radio>
-        </x-radio-group>
-        <x-radio
-            v-model="radio"
-            label="three"
-            @change="test"
+        <x-link
+            disabled
+        >
+            草泥马1
+        </x-link>
+        <x-link
+            type="warning"
+            underline
+            icon="x-icon-edit"
+            href="http://www.baidu.com"
+            target="_blank"
+        >
+            草泥马2
+        </x-link>
+        <x-link
+            type="danger"
+        >
+            草泥马3
+            <x-icon icon="x-icon-view el-icon--right" />
+        </x-link>
+        <x-link
+            type="success"
+            disabled
+        >
+            草泥马4
+        </x-link>
+        <x-link
+            type="info"
+            disabled
         >
             草泥马5
-        </x-radio>
+        </x-link>
     </div>
 </template>
 

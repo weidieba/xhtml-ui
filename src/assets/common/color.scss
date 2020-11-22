@@ -8,7 +8,9 @@
     $--color-lighter-gray: #b4b7bf;
     $--color-white: #FFF;
     $--color-info: #909399;
-  
+    $--color-white: #FFFFFF;
+    $--color-disabled: #c0c4cc;
+
     /* 辅助色 */
     $--color-warning: #ff4222;
     $--color-deep-warning: #E63C1E;
@@ -18,7 +20,7 @@
     $--color-deep-success: #00b321;
     $--color-hover-success: #18db3c;
     $--color-notice: #e5a325;
-  
+
     /* 背景及线条颜色 */
     $--line-deep-gray: #dadee7;
     $--line-light-gray: #ebedf2;
@@ -36,21 +38,34 @@
     $--bg-light-info: #f4f4f5;
     $--bg-light-cyan: #f5f8fa;
     $--bg-deep-cyan: #eef3f6;
-  
+
     /* 透明度 */
     $--disabled-opacity: 0.38;
-  
+
     /* 边框线 */
     $--border-base: 1px solid $--line-deep-gray;
     $--border-selected: 1px solid $--color-light-gray;
     $--border-radius-base: 2px;
-  
+
     /* 渐变 */
     $--all-transition: all .3s cubic-bezier(.645,.045,.355,1);
-  
+
     /* box-shadow */
     $--shadow-large-tip: 0 1px 15px 0 rgba(30, 36, 49, 0.15);
+
+    /* 字号 */
+    $--link-font-size: 14px;
+    $--link-font-weight: 500;
     
+    // 循环所使用到的kind
+    $typeMap: (
+        primary: $--color-primary,
+        danger: $--color-warning,
+        success: $--color-success,
+        warning: $--color-notice,
+        info: $--color-info
+    );
+
     // 相同变量名
     $class-prefix: "x"; 
     $is: "is";
