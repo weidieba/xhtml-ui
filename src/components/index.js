@@ -5,6 +5,8 @@ import statusBar from './statusBar/index.js';
 import Link from './link/index';
 import Radio from './radio/index.js';
 import RadioGroup from './radio-group/index';
+import CheckBox from './checkbox/index';
+import CheckboxGroup from './checkbox-group/index';
 // 存储组件列表
 const components = [
     Button,
@@ -12,7 +14,9 @@ const components = [
     statusBar,
     Link,
     Radio,
-    RadioGroup
+    RadioGroup,
+    CheckBox,
+    CheckboxGroup
 ];
 // 这里提供一个方法，待会用的时候就use这个方法,因为use是vue的方法，所以这个方法要把Vue传进来
 const install = (Vue) => {
@@ -34,5 +38,7 @@ export default {
     statusBar,
     Link,
     Radio,
-    RadioGroup
+    RadioGroup,
+    CheckBox,
+    CheckboxGroup
 };
