@@ -1,5 +1,5 @@
 // vue.config.js
-const path = require('path')
+const path = require('path');
 module.exports = {
     chainWebpack: config => {
         // 修复HMR
@@ -11,4 +11,4 @@ module.exports = {
         sourceMap: false,
         requireModuleExtension: true
     }
-}
+};

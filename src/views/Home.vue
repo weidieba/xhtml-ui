@@ -1,37 +1,29 @@
 <template>
     <div class="home">
-        <x-link
-            disabled
+        <x-checkbox
+            v-model="isCheck"
+            :borders="true"
+            :disabled="false"
+            :indeterminate="indeterminate"
+            label="正常的checkbox1"
+            @change="handleChange"
         >
-            草泥马1
-        </x-link>
-        <x-link
-            type="warning"
-            underline
-            icon="x-icon-edit"
-            href="http://www.baidu.com"
-            target="_blank"
+        </x-checkbox>
+        <x-checkbox-group
+            v-model="modelArray"
+            @change="handleGroupChange"
         >
-            草泥马2
-        </x-link>
-        <x-link
-            type="danger"
+            <x-checkbox
+                v-for="(se,index) in SEs"
+                :key="index"
+                :value="se"
+                :label="se"
+            ></x-checkbox>
+        </x-checkbox-group>
+        <input
+            type="checkbox"
+            indeterminate
         >
-            草泥马3
-            <x-icon icon="x-icon-view el-icon--right" />
-        </x-link>
-        <x-link
-            type="success"
-            disabled
-        >
-            草泥马4
-        </x-link>
-        <x-link
-            type="info"
-            disabled
-        >
-            草泥马5
-        </x-link>
     </div>
 </template>
 
@@ -42,12 +34,22 @@ export default {
     },
     data() {
         return {
-            radio: 'three'
+            radio: 'three',
+            test1: '2222',
+            SEs: ['baidu', 'google', 'sogou', '360'],
+            modelArray: [],
+            indeterminate: false,
+            isCheck: false
         };
     },
     methods: {
-        test(val) {
-            console.log(val);
+        handleGroupChange(val) {
+            this.indeterminate = this.modelArray.length < this.SEs.length;
+            this.isCheck = this.modelArray.length > 0;
+            console.log(this.modelArray);
+        },
+        handleChange(value) {
+            this.modelArray = value ? this.SEs : [];
         }
     }
 };
