@@ -7,6 +7,7 @@ import Radio from './radio/index.js';
 import RadioGroup from './radio-group/index';
 import CheckBox from './checkbox/index';
 import CheckboxGroup from './checkbox-group/index';
+import Input from './input/index';
 // 存储组件列表
 const components = [
     Button,
@@ -16,7 +17,8 @@ const components = [
     Radio,
     RadioGroup,
     CheckBox,
-    CheckboxGroup
+    CheckboxGroup,
+    Input
 ];
 // 这里提供一个方法，待会用的时候就use这个方法,因为use是vue的方法，所以这个方法要把Vue传进来
 const install = (Vue) => {
@@ -40,5 +42,6 @@ export default {
     Radio,
     RadioGroup,
     CheckBox,
-    CheckboxGroup
+    CheckboxGroup,
+    Input
 };
