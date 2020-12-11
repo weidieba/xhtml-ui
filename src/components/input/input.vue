@@ -1,6 +1,6 @@
 <template>
     <div>
-        input
+        input1
     </div>
 </template>
 <script>
