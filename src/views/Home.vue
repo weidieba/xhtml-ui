@@ -20,10 +20,12 @@
                 :label="se"
             ></x-checkbox>
         </x-checkbox-group>
-        <input
-            type="checkbox"
-            indeterminate
+        <x-button
+            status="default"
+            @click="test"
         >
+            朴素按钮
+        </x-button>
     </div>
 </template>
 
@@ -50,6 +52,10 @@ export default {
         },
         handleChange(value) {
             this.modelArray = value ? this.SEs : [];
+        },
+        test() {
+            console.log(this);
+            this.$message('这条消息会持续5秒钟', 'success', null, 5000);
         }
     }
 };

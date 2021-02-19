@@ -12,6 +12,7 @@
     $--color-disabled: #c0c4cc;
 
     /* 辅助色 */
+    $--color-danger: #F56C6C;
     $--color-warning: #ff4222;
     $--color-deep-warning: #E63C1E;
     $--color-hover-warning: #FF684F;
@@ -65,7 +66,16 @@
         warning: $--color-notice,
         info: $--color-info
     );
+    // message 
+    $--color-danger-light: mix($--color-white, $--color-danger, 80%);
+    $--color-danger-lighter: mix($--color-white, $--color-danger, 90%);
+    $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+    $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+    $--color-info-light: mix($--color-white, $--color-info, 80%) !default;
 
+    $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+    $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+    $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
     // 相同变量名
     $class-prefix: "x"; 
     $is: "is";
