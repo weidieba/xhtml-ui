@@ -54,7 +54,6 @@ export default {
             this.modelArray = value ? this.SEs : [];
         },
         test() {
-            console.log(this);
             this.$message('这条消息会持续5秒钟', 'success', null, 5000);
         }
     }
