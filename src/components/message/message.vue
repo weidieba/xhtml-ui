@@ -11,7 +11,7 @@
                 :icon="iconName"
                 class="message_icon mr10"
             ></x-icon>
-            {{ content }}
+            {{ message }}
         </div>
     </transition>
 </template>
@@ -29,7 +29,7 @@ export default {
         return {
             type: 'info',
             messageVisible: false,
-            content: '',
+            message: '',
             duration: 2000,
             closed: false,
             // 关闭时的回调函数
@@ -102,7 +102,7 @@ export default {
         min-width: 380px;
         height: 50px;
         padding: 0 15px;
-        border-radius: 2px;
+        border-radius: 4px;
         text-align: center;
         z-index: 90000;
         font-size: 14px;
@@ -114,6 +114,8 @@ export default {
         display: flex;
         align-items: center;
         &--info {
+            background-color: $--color-info-lighter;
+            border-color: $--color-info-light;
             color: $--color-info;
         }
         &--success {

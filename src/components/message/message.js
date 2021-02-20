@@ -5,24 +5,24 @@ let MessageConstructor = Vue.extend(Message);
 let instance;
 
 let MESSAGE_TYPE = ['info', 'success', 'error', 'warning'];
-let defaultDuration = 2000;
+let defaultDuration = 1000;
 
 /**
  * Message处理函数
- * @param {string} content                    消息内容
- * @param {string} type                       消息类型：normal、success、error、warning
+ * @param {string} message                    消息内容
+ * @param {string} type                       消息类型：info、success、error、warning
  * @param {function} onClose                  消息窗关闭时的回调函数
  * @param {number} [duration=defaultDuration] 消息显示时长
  * @return {instance}                         返回当前消息的实例
  */
-var message = function (content, type, onClose, duration = defaultDuration) {
+var message = function (message, type, onClose, duration = defaultDuration) {
     if (!onClose) {
         onClose = function () {};
     }
 
     instance = new MessageConstructor({
         data: {
-            content: content,
+            message: message,
             type: type,
             onClose: onClose,
             duration: duration
@@ -37,11 +37,11 @@ var message = function (content, type, onClose, duration = defaultDuration) {
 
 // 在message上为每种消息类型注册各自的方法
 MESSAGE_TYPE.forEach(kind => {
-    message[kind] = (content, onClose, duration) => {
+    message[kind] = (message, onClose, duration) => {
         if (!onClose) {
             onClose = function () {};
         }
-        return message(content, kind, onClose, duration);
+        return message(message, kind, onClose, duration);
     };
 });
 
