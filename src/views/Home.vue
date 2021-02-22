@@ -54,7 +54,8 @@ export default {
             this.modelArray = value ? this.SEs : [];
         },
         test() {
-            this.$message('这条消息会持续5秒钟', 'warning', null, 0);
+            // this.$message('这条消息会持续5秒钟', 'success', null, 0);
+            this.$message.warning('这是this.$message.warning方式触发的警告消息');
         }
     }
 };
