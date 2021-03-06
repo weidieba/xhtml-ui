@@ -58,5 +58,13 @@ export default {
     unbind(el) {
         const onscroll = el.XSCORLL;
         off(el, 'scroll', onscroll);
+    },
+    // vnode更新
+    update(el, binding, vnode) {
+        if (vnode.data && vnode.data.attrs && vnode.data.attrs.scrollDisable) {
+            const onscroll = el.XSCORLL;
+            off(el, 'scroll', onscroll);
+            return;
+        }
     }
 };

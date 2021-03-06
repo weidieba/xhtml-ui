@@ -29,6 +29,7 @@
         <div class="">
             <ul
                 v-on-scroll.bottom.20="handleScroll"
+                :scrollDisable="list>12"
             >
                 <li
                     v-for="(item,index) in list"
@@ -69,7 +70,7 @@ export default {
             setTimeout(() => {
                 this.list++;
                 this.loading = false;
-            }, 2000);
+            }, 1000);
         },
         handleGroupChange(val) {
             this.indeterminate = this.modelArray.length < this.SEs.length;
