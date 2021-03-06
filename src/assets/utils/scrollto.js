@@ -49,7 +49,7 @@ export const off = (function () {
 })();
 
 // 防抖函数
-export default function debounce(callback, delay) {
+export function debounce(callback, delay) {
     let time;
     return function () {
         if (time) {
