@@ -1,31 +1,5 @@
 <template>
     <div class="home">
-        <x-checkbox
-            v-model="isCheck"
-            :borders="true"
-            :disabled="false"
-            :indeterminate="indeterminate"
-            label="正常的checkbox1"
-            @change="handleChange"
-        >
-        </x-checkbox>
-        <x-checkbox-group
-            v-model="modelArray"
-            @change="handleGroupChange"
-        >
-            <x-checkbox
-                v-for="(se,index) in SEs"
-                :key="index"
-                :value="se"
-                :label="se"
-            ></x-checkbox>
-        </x-checkbox-group>
-        <x-button
-            status="default"
-            @click="test"
-        >
-            朴素按钮
-        </x-button>
         <div class="">
             <ul
                 v-on-scroll.bottom.20="handleScroll"
@@ -44,6 +18,18 @@
                 加载中...
             </p>
         </div>
+        <x-drap-wrap
+            :option="SEs"
+            class="drag-test"
+            @change="handleDrap"
+        >
+            <x-drap-item
+                v-for="(item, index) in SEs"
+                :key="index"
+            >
+                <div>{{ item }}</div>
+            </x-drap-item>
+        </x-drap-wrap>
     </div>
 </template>
 
@@ -56,7 +42,7 @@ export default {
         return {
             radio: 'three',
             test1: '2222',
-            SEs: ['baidu', 'google', 'sogou', '360'],
+            SEs: ['1', '2', '3', '4'],
             modelArray: [],
             indeterminate: false,
             isCheck: false,
@@ -65,6 +51,9 @@ export default {
         };
     },
     methods: {
+        handleDrap(value) {
+            console.log('change', value);
+        },
         handleScroll() {
             this.loading = true;
             setTimeout(() => {
@@ -101,5 +90,17 @@ ul {
     margin: 10px;
     list-style: none;
     text-align: center;
+}
+.drag-test  {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    overflow-y: scroll;
+}
+.x-drag-item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: violet;
 }
 </style>

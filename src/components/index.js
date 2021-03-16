@@ -9,6 +9,8 @@ import CheckBox from './checkbox/index';
 import CheckboxGroup from './checkbox-group/index';
 import Message from './message/index';
 import OnScroll from './on-scroll/index';
+import DrapWrap from './drag-wrap/index';
+import DrapItem from './drap-item/index';
 // 存储组件列表
 const components = [
     Button,
@@ -20,7 +22,9 @@ const components = [
     CheckBox,
     CheckboxGroup,
     Message,
-    OnScroll
+    OnScroll,
+    DrapWrap,
+    DrapItem
 ];
 // 这里提供一个方法，待会用的时候就use这个方法,因为use是vue的方法，所以这个方法要把Vue传进来
 const install = (Vue) => {
@@ -50,5 +54,7 @@ export default {
     CheckBox,
     CheckboxGroup,
     Message,
-    OnScroll
+    OnScroll,
+    DrapWrap,
+    DrapItem
 };
