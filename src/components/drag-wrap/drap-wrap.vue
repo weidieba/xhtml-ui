@@ -61,7 +61,7 @@ export default {
             });
             let newData = [];
             newChild.forEach((item, index) => {
-                newData[index] = this.childrenMap[item];
+                newData[index] = this.option[item];
             });
             this.$emit('change', newData);
         },

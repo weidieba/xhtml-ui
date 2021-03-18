@@ -27,7 +27,7 @@
                 v-for="(item, index) in SEs"
                 :key="index"
             >
-                <div>{{ item }}</div>
+                <div>{{ item.text }}</div>
             </x-drap-item>
         </x-drap-wrap>
     </div>
@@ -42,7 +42,7 @@ export default {
         return {
             radio: 'three',
             test1: '2222',
-            SEs: ['1', '2', '3', '4'],
+            SEs: [{text: '星期一', id: 1}, {text: '星期二', id: 2}, {text: '星期三', id: 3}, {text: '星期四', id: 4}],
             modelArray: [],
             indeterminate: false,
             isCheck: false,
