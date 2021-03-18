@@ -1,4 +1,4 @@
-import {on, off, getComputedStyle, debounce} from '@/assets/utils/scrollto.js';
+import {on, off, getComputedStyle, debounce} from '@/assets/utils/dom.js';
 const bottom = function (element, currentTop, offset) {
     //  获取当前计算的style属性
     const styles = getComputedStyle(element);
@@ -34,7 +34,7 @@ const postion = debounce((element, binding) => {
             binding.offset = item;
             return;
         }
-
+        // scrollTop 滚动条元素
         const currentTop = element.scrollTop;
         const result = bottom(element, currentTop, parseInt(binding.offset, 20) || 0);
         //  执行方法

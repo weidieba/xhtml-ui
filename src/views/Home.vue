@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <div class="">
+        <!-- <div class="">
             <ul
                 v-on-scroll.bottom.20="handleScroll"
                 :scrollDisable="list>12"
@@ -17,7 +17,7 @@
             <p v-if="loading">
                 加载中...
             </p>
-        </div>
+        </div> -->
         <x-drap-wrap
             :option="SEs"
             class="drag-test"
@@ -52,7 +52,7 @@ export default {
     },
     methods: {
         handleDrap(value) {
-            console.log('change', value);
+            // console.log('change', value);
         },
         handleScroll() {
             this.loading = true;
@@ -76,7 +76,7 @@ export default {
     }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 ul {
     height: 190px;
     overflow-y: scroll;
@@ -94,7 +94,7 @@ ul {
 .drag-test  {
     width: 100%;
     height: 200px;
-    display: flex;
+    // display: flex;
     overflow-y: scroll;
 }
 .x-drag-item {

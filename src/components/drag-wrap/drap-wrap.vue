@@ -5,6 +5,7 @@
 </template>
 <script>
 import Emmitter from '@/assets/utils/emitter';
+import {getParent, getIsScrollbar, getElePosition} from '@/assets/utils/dom.js';
 export default {
     name: 'XDrapWrap',
     mixins: [Emmitter],
@@ -14,6 +15,10 @@ export default {
             default: () => {
                 return [];
             }
+        },
+        autoScroll: {
+            type: Boolean,
+            default: true
         }
     },
     data() {
@@ -34,12 +39,21 @@ export default {
     methods: {
         onDragstart(element) {
             this.fromDom = element;
+            // 增加根据autoScroll 是否触发父容器自动滚动
+            if (this.autoScroll) {
+                let parentNode = getParent(element);
+                if (parentNode && getIsScrollbar(parentNode)) {
+                    const direction = this.getScrollDirection(parentNode);
+                    console.log(direction);
+                }
+            }
         },
         onDragenter(el) {
             this.toDom = el;
             if (this.fromDom === this.toDom) {
                 return;
             }
+
             if (this.isPrevNode(this.fromDom, this.toDom)) {
                 this.$refs.dragWrap.insertBefore(this.fromDom, this.toDom);
             }
@@ -74,6 +88,20 @@ export default {
                 // 重新赋值防止死循环
                 from = from.previousSibling;
             }
+        },
+        getScrollDirection(parent) {
+            const containerRect = getElePosition(parent);
+            const srcNodeRect = getElePosition(this.fromDom);
+            console.log(srcNodeRect, containerRect);
+            if (srcNodeRect.top + srcNodeRect.height > containerRect.top + containerRect.height
+                && parent.scrollHeight > parent.clientHeight + parent.scrollTop) {
+                return 'bottom';
+            }
+
+            if (srcNodeRect.top < containerRect.top && parent.scrollTop > 0) {
+                return 'top';
+            }
+            return '';
         }
     }
 };
