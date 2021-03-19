@@ -40,13 +40,13 @@ export default {
         onDragstart(element) {
             this.fromDom = element;
             // 增加根据autoScroll 是否触发父容器自动滚动
-            if (this.autoScroll) {
-                let parentNode = getParent(element);
-                if (parentNode && getIsScrollbar(parentNode)) {
-                    const direction = this.getScrollDirection(parentNode);
-                    console.log(direction);
-                }
-            }
+            // if (this.autoScroll) {
+            //     let parentNode = getParent(element);
+            //     if (parentNode && getIsScrollbar(parentNode)) {
+            //         const direction = this.getScrollDirection(parentNode);
+            //         console.log(direction);
+            //     }
+            // }
         },
         onDragenter(el) {
             this.toDom = el;
@@ -77,7 +77,7 @@ export default {
             newChild.forEach((item, index) => {
                 newData[index] = this.option[item];
             });
-            this.$emit('change', newData);
+            this.$emit('change', this.option, newData);
         },
         isPrevNode(from, to) {
             //  判断当前节点得上一个节点
