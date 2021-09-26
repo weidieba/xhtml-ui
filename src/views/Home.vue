@@ -41,7 +41,7 @@
                 </li>
             </ul>
             <p v-if="loading">
-                测试加载中...
+                测试jenkins
             </p>
         </div>
     </div>
