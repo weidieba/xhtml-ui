@@ -12,6 +12,7 @@
   },
   "main": "lib/xhtml-ui.umd.min.js",
   "dependencies": {
+    "clipboard": "^2.0.8",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "throttle-debounce": "^3.0.1",
