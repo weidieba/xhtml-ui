@@ -1,32 +1,6 @@
 <template>
     <div class="home">
-        <x-checkbox
-            v-model="isCheck"
-            :borders="true"
-            :disabled="false"
-            :indeterminate="indeterminate"
-            label="正常的checkbox1"
-            @change="handleChange"
-        >
-        </x-checkbox>
-        <x-checkbox-group
-            v-model="modelArray"
-            @change="handleGroupChange"
-        >
-            <x-checkbox
-                v-for="(se,index) in SEs"
-                :key="index"
-                :value="se"
-                :label="se"
-            ></x-checkbox>
-        </x-checkbox-group>
-        <x-button
-            status="default"
-            @click="test"
-        >
-            朴素按钮
-        </x-button>
-        <div class="">
+        <!-- <div class="">
             <ul
                 v-on-scroll.bottom.20="handleScroll"
                 :scrollDisable="list>12"
@@ -43,31 +17,19 @@
             <p v-if="loading">
                 测试jenkinsssss
             </p>
-            <p class="testcopy">
-                123123131
-            </p>
-            <div ref="copyDiv">
-                <p>123</p>
-                <p>456</p>
-                <p>789</p>
-            </div>
-            <x-copy
-                kind="text"
-                value="123"
-                @success="handleCopy"
+        </div> -->
+        <x-drap-wrap
+            :option="SEs"
+            class="drag-test"
+            @change="handleDrap"
+        >
+            <x-drap-item
+                v-for="(item, index) in SEs"
+                :key="index"
             >
-                <span>测试</span>
-            </x-copy>
-            <x-copy
-                kind="ref"
-                value="copyDiv"
-                @success="handleCopy"
-            >
-                <x-button kind="primary">
-                    复制到剪贴板
-                </x-button>
-            </x-copy>
-        </div>
+                <div>{{ item.text }}</div>
+            </x-drap-item>
+        </x-drap-wrap>
     </div>
 </template>
 
@@ -80,7 +42,7 @@ export default {
         return {
             radio: 'three',
             test1: '2222',
-            SEs: ['baidu', 'google', 'sogou', '360'],
+            SEs: [{text: '星期一', id: 1}, {text: '星期二', id: 2}, {text: '星期三', id: 3}, {text: '星期四', id: 4}],
             modelArray: [],
             indeterminate: false,
             isCheck: false,
@@ -89,9 +51,8 @@ export default {
         };
     },
     methods: {
-        handleCopy(e) {
-            console.log('wocao', e);
-            e.clearSelection();
+        handleDrap(value) {
+            // console.log('change', value);
         },
         handleScroll() {
             this.loading = true;
@@ -115,7 +76,7 @@ export default {
     }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 ul {
     height: 190px;
     overflow-y: scroll;
@@ -129,5 +90,17 @@ ul {
     margin: 10px;
     list-style: none;
     text-align: center;
+}
+.drag-test  {
+    width: 100%;
+    height: 200px;
+    // display: flex;
+    overflow-y: scroll;
+}
+.x-drag-item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: violet;
 }
 </style>
