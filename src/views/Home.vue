@@ -43,6 +43,30 @@
             <p v-if="loading">
                 测试jenkinsssss
             </p>
+            <p class="testcopy">
+                123123131
+            </p>
+            <div ref="copyDiv">
+                <p>123</p>
+                <p>456</p>
+                <p>789</p>
+            </div>
+            <x-copy
+                kind="text"
+                value="123"
+                @success="handleCopy"
+            >
+                <span>测试</span>
+            </x-copy>
+            <x-copy
+                kind="ref"
+                value="copyDiv"
+                @success="handleCopy"
+            >
+                <x-button kind="primary">
+                    复制到剪贴板
+                </x-button>
+            </x-copy>
         </div>
     </div>
 </template>
@@ -65,6 +89,10 @@ export default {
         };
     },
     methods: {
+        handleCopy(e) {
+            console.log('wocao', e);
+            e.clearSelection();
+        },
         handleScroll() {
             this.loading = true;
             setTimeout(() => {
